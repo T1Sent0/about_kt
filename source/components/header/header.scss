@@ -1,0 +1,65 @@
+@import './settings-header/mixin';
+@import './settings-header/color';
+
+.header {
+  @include margin-element(0 0 0 3.48em);
+  @include padding-element(2.187em 2.06em 2.187em 2.25em);
+  box-sizing: border-box;
+  height: 32.5em;
+  background: url("./img/header.png") center / cover;
+  display: flex;
+  .title-header {
+    align-self: flex-start;
+    justify-content: flex-start;
+    display: flex;
+    align-items: baseline;
+
+    a {
+      display: inline;
+      font-family: 'ProximaNova_Regilar', serif;
+      font-size: 1.16em;
+      color: $color-a-header;
+      cursor: default;
+      text-decoration: none;
+    }
+    a:nth-child(5) {
+      color: $color-span-last-header;
+    }
+    a:nth-child(odd) {
+      cursor: pointer;
+    }
+    a:not(:last-child) {
+      margin-right: 1.25em;
+    }
+  }
+
+  h1 {
+    cursor: default;
+    text-align: center;
+    align-self: center;
+    position: relative;
+    font-size: 5.5em;
+    left: calc(50% - 7.9em);
+    color: $color-h1-header;
+    mix-blend-mode: overlay;
+    font-family: 'ProximaNova-Black', serif;
+  }
+
+  .all-service {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 90%;
+    img {
+      width: 15%;
+      margin-right: .62em;
+      cursor: pointer;
+    }
+    a {
+      color: $color-a-header;
+      text-decoration: none;
+      cursor: pointer;
+      font-family: 'ProximaNova_Regilar', serif;
+    }
+  }
+}

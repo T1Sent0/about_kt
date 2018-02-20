@@ -1,0 +1,18 @@
+div.container-header
+    div.header
+        div.title-header
+            each category, index in ['Главная', '...', 'Ипаар', '...', 'О нас']
+                if index === 0
+                    a(href='#')= category
+                if index === 1
+                    a= category
+                if index === 2
+                    a(href='#')= category
+                if index === 3
+                    a= category
+                if index === 4
+                    a(href='#')= category
+        h1 KUZNETCOV.TEAM
+        div.all-service
+            img(src=require('./img/all_services.svg'))
+            a(href='#') Все услуги

@@ -1,0 +1,61 @@
+@import "./settings-menu/mixin";
+@import "settings-menu/color";
+
+
+.menu {
+  @include padding-element(0);
+  @include margin-element(0);
+  background: $background-container-menu;
+  position: fixed;
+  height: 100vh;
+  width: 3.48em;
+  text-align: center;
+  img {
+    @include padding-element(1.25em 0);
+    height: 3.25em;
+  }
+  ul {
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    width: inherit;
+    li {
+      list-style: none;
+      height: 3.48em;
+      a {
+        display: block;
+        height: inherit;
+        &.fb-logo {
+          background: url('./img/fb.png') center/cover no-repeat;
+        }
+        &.vk-logo {
+          background: url('./img/vk.png') center/cover no-repeat;
+        }
+        &.insta-logo {
+          background: url('./img/insta.png') center/cover no-repeat;
+        }
+        &.youtube-logo {
+          background: url('./img/youtube.png') center/cover no-repeat;
+        }
+        &.pensil {
+          background: url('./img/message.svg') center/cover no-repeat;
+          background-size: 70%;
+        }
+        &.fb-logo, &.vk-logo, &.insta-logo, &.youtube-logo {
+          background-position-y: -2%;
+          &:hover {
+            background-position-y: 100%;
+          }
+        }
+      }
+    }
+
+    li:not(:last-child) {
+      border-top: .1em solid $color-li-border-menu;
+    }
+    li:last-child {
+      background: $background-color-pensil-element-menu;
+    }
+  }
+}

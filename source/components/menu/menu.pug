@@ -1,0 +1,21 @@
+div.container-menu
+    div.menu
+        img(src=require('./img/logo.png'))
+        ul
+            each caltgory, index in ['fb-logo', 'vk-logo', 'insta-logo', 'youtube-logo', 'pensil']
+                if index === 0
+                    li
+                        a(class=caltgory href="#")
+
+                if index === 1
+                    li
+                        a(class=caltgory href="#")
+                if index === 2
+                    li
+                        a(class=caltgory href="#")
+                if index === 3
+                    li
+                        a(class=caltgory href="#")
+                if index === 4
+                    li
+                        a(class=caltgory href="#")

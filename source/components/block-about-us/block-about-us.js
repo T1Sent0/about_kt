@@ -1,0 +1,1 @@
+import './block-about-us.scss'

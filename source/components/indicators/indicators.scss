@@ -1,0 +1,18 @@
+.indicators-content {
+  margin-left: 3.48em;
+  padding: 2em 5em;
+  display: flex;
+  align-items: center;
+  height: 10em;
+  justify-content: center;
+  background: #56c3e7;
+  div:not(:last-child) {
+    margin-right: 2em;
+  }
+  div {
+    text-align: center;
+    h1, span {
+      font-family: ProximaNova_Regilar;
+    }
+  }
+}

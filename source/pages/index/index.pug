@@ -6,14 +6,18 @@ block main
     div.main
         include ../../components/menu/menu
         include ../../components/header/header
-    div.content-greeting
-        div.greeting
-            div.greeting-text
-                h1.greeting-title Привет,
-                h1.greeting-title меня зовут Никита Кузнецов
-                span Мы команда специалистов с опытом работы в крупных проектах, каждый их которых ни раз доказал на практике способность находить изящные и эффективные решения в сложных ситуациях.
-                span Мы используем маркетинг, чтобы вы смогли получить не просто успешный проект, но и полный контроль над его судьбой! На страницах нашего сайта мы расскажем, как именно мы это сделаем.
-                h2 Теперь, от слов к нашим делам KUZNETCOV.TEAM, это:
-            div.greeting-photo
-                img(src=require('./img/photo.png'))
-            div.rectangel
+        div.container-greeting
+            div.greeting
+                div.greeting-text
+                    h1.greeting-title Привет,
+                    h1.greeting-title меня зовут Никита Кузнецов
+                    span Мы команда специалистов с опытом работы в крупных проектах, каждый их которых ни раз доказал на практике способность находить изящные и эффективные решения в сложных ситуациях.
+                    span Мы используем маркетинг, чтобы вы смогли получить не просто успешный проект, но и полный контроль над его судьбой! На страницах нашего сайта мы расскажем, как именно мы это сделаем.
+                    h2 Теперь, от слов к нашим делам KUZNETCOV.TEAM, это:
+                div.greeting-photo
+                    img(src=require('./img/photo.png'))
+                div.rectangel
+        include ../../components/block-about-us/block-about-us
+        include ../../components/indicators/indicators
+        div.project-carousel
+            h1 Здесь может быть ваша компания

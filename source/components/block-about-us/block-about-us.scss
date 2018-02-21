@@ -1,0 +1,49 @@
+@import "./settings-block-about-us/mixin";
+@import "./settings-block-about-us/color";
+
+.one-block-about-us, .two-block-about-us, .three-block-about-us {
+  @include padding-element(2em 5em 0 5em);
+  @include margin-element(0 0 0 3.48em);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .circle {
+    border-radius: 50%;
+    width: .5em;
+    height: .5em;
+    background: $color-element-about-us;
+  }
+  .line {
+    width: 5em;
+    height: .1em;
+    background: $color-element-about-us;
+    position: relative;
+  }
+  .block-text-about-us {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    @include padding-element(5em 0 0 0);
+    &:last-child {
+      @include padding-element(5em 0 5em 0)
+    }
+  }
+  .text-about-us {
+    width: 80%;
+    h1 {
+      margin-top: 0;
+      font-family: ProximaNova-Black;
+    }
+    p {
+      @include margin-element(0);
+      font-family: ProximaNova_Regilar;
+      font-size: 1.25em;
+    }
+    @include padding-element(0 .5em .5em .5em);
+    border: .2em solid $color-element-about-us;
+    border-image: linear-gradient(to right, $color-element-about-us 1%,rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0) 99%,$color-element-about-us 99%);
+    border-image-slice: 1;
+  }
+}

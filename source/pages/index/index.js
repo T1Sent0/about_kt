@@ -1,5 +1,5 @@
 import "./jquery.inputmask";
-import Slider from 'swiper'
+import Slider from 'swiper/dist/js/swiper'
 
 $(document).ready(function () {
 

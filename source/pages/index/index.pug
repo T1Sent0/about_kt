@@ -31,3 +31,6 @@ block main
                         img.swiper-slide(src=require('./img/slider/fifth-slide.png'))
                         img.swiper-slide(src=require('./img/slider/sixth-slide.png'))
                         img.swiper-slide(src=require('./img/slider/seventh-slide.png'))
+        div.container-form
+            include ../../components/form/form
+            +create_form("form")

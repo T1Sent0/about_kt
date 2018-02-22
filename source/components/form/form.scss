@@ -1,0 +1,76 @@
+.content-form {
+  width: 100%;
+  background: #cdcddc;
+  padding: 5%;
+  text-align: center;
+  h1 {
+    font-family: ProximaNova-Black;
+  }
+}
+
+.field-form {
+  * {
+    font-family: ProximaNova_Regilar;
+  }
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 35%;
+  padding: 2.5%;
+  background: #fff;
+  display: flex;
+  flex-flow: column;
+  input, textarea {
+    margin-bottom: .5em;
+    background: none;
+    border: none;
+    border-bottom: .1em solid #eeeeee;
+    outline: none;
+    resize: none;
+  }
+  button {
+    background: #56c3e7;
+    border: none;
+    border-radius: 2em;
+    padding: .5em 1em;
+    position: relative;
+    left: 0;
+    right: 0;
+    color: white;
+    margin: auto;
+  }
+
+  .block-checkbox {
+    margin-bottom: 1em;
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  span {
+    display: flex;
+    position: relative;
+  }
+
+  label > span:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 1em;
+    height: 1em;
+    margin-right: .5em;
+  }
+
+  label > span:before {
+    content: "";
+    display: block;
+    width: 1em;
+    height: 1em;
+    margin-right: .5em;
+  }
+
+}

@@ -1,0 +1,18 @@
+mixin create_form(id_form)
+    div.content-form
+        h1 Мы готовы, а вы ?
+        form(id=id_form)
+            div.field-form
+                input(type='text' name=name)
+                input(type='text' name=site)
+                input(type='text' name=phone)
+                textarea(name=comment_area rows=5)
+                div.block-checkbox
+                    span.title-block-checkbox Предполагаемый бюджет:
+                        label
+                            input(type='checkbox' name=summ)
+                            span До 500 тыс.
+                        label
+                            input(type='checkbox' name=summ)
+                            span От 500 тыс.
+                button(type=submit) Начать работу

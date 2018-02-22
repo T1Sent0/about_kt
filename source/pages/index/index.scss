@@ -32,7 +32,7 @@
       font-size: 2.66em;
       font-family: 'ProximaNova-Black', serif;
       &:nth-child(2) {
-        @include margin-element(0 0 2.5em 0);
+        @include margin-element(0 0 .5em 0);
       }
     }
     span {
@@ -40,15 +40,12 @@
       font-family: 'ProximaNova_Regilar', serif;
       font-size: 1.25em;
       width: 105%;
-      &:nth-child(2) {
-        @include margin-element(0 0 2.5em 0);
-      }
     }
     :nth-child(3) {
-      @include margin-element(0 0 2.5em 0)
+      @include margin-element(0 0 1.5em 0)
     }
     :nth-child(4) {
-      @include margin-element(0 0 1.8em 0)
+      @include margin-element(0 0 1.5em 0)
     }
     h2 {
       font-size: 1.3em;
@@ -67,14 +64,41 @@
 }
 
 .project-carousel {
+  overflow: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 2em 0;
+  padding: 5.31em 3.48em;
+  margin-left: 3.48em;
+  align-items: center;
   h1 {
     width: 30%;
     text-align: center;
     font-family: ProximaNova-Black;
   }
+
+
+  .container-carousel {
+    display: flex;justify-content: center;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .swiper-container {
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+  }
+
 }
 
 

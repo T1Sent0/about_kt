@@ -1,22 +1,26 @@
 @import "./settings-block-about-us/mixin";
 @import "./settings-block-about-us/color";
 
+.container-about-us {
+  @include padding-element(0 0 7.4em 0)
+}
+
 .one-block-about-us, .two-block-about-us, .three-block-about-us {
-  @include padding-element(2em 5em 0 5em);
+  //@include padding-element(7.4em 5em 0 5em);
   @include margin-element(0 0 0 3.48em);
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: center;
   .circle {
-    border-radius: 50%;
-    width: .5em;
-    height: .5em;
+    border-radius: 100%;
+    width: .8em;
+    height: .8em;
     background: $color-element-about-us;
   }
   .line {
-    width: 5em;
-    height: .1em;
+    width: 12em;
+    height: .15em;
     background: $color-element-about-us;
     position: relative;
   }
@@ -25,9 +29,11 @@
     flex-direction: row;
     align-items: center;
     width: 70%;
-    @include padding-element(5em 0 0 0);
     &:last-child {
-      @include padding-element(5em 0 5em 0)
+      @include padding-element(7.4em 0 0 0);
+    }
+    img {
+      width: 25%;
     }
   }
   .text-about-us {

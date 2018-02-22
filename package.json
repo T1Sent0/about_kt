@@ -31,6 +31,7 @@
     "pug-loader": "^2.3.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
+    "swiper": "^4.1.6",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7",
@@ -41,7 +42,6 @@
     "jquery": "^3.2.1",
     "jquery-plugin-viewport-checker": "^1.8.3",
     "normalize.css": "^7.0.0",
-    "swiper": "^4.1.0",
     "typed.js": "^2.0.6"
   }
 }

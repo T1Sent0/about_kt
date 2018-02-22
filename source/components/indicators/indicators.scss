@@ -3,9 +3,9 @@
   padding: 2em 5em;
   display: flex;
   align-items: center;
-  height: 10em;
+  height: 15.5em;
   justify-content: center;
-  background: #56c3e7;
+  background: url('./img/bg-indicators.png') center/cover no-repeat #56c3e7;
   div:not(:last-child) {
     margin-right: 2em;
   }
@@ -13,6 +13,14 @@
     text-align: center;
     h1, span {
       font-family: ProximaNova_Regilar;
+      font-weight: 100;
+    }
+    h1 {
+      font-size: 4.16em;
+      margin: 0;
+    }
+    span {
+      font-family: ProximaNova-Black;
     }
   }
 }

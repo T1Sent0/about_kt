@@ -1,6 +1,27 @@
 import "./jquery.inputmask";
+import Slider from 'swiper'
 
 $(document).ready(function () {
+
+    let slider = new Slider('.swiper-container', {
+        effect: 'coverflow',
+        initialSlide: 3,
+        spaceBetween: -120,
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 20,
+            stretch: 0,
+            depth: 0,
+            modifier: 1,
+            slideShadows : true,
+        },
+    });
+
+    slider.init();
+
+
     const bodySelector = $('body');
 
     bodySelector.on('click', '.scroll-up', scrollTop);

@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css">
     <title>about_us
     </title>
   <link href="./css/style.css" rel="stylesheet"></head>
   <body>
     <div class="main">
+      <div class="opacity"></div>
 <div class="container-menu">
-  <div class="menu"><img src="image/logo.png">
+  <div class="menu">
+    <div class="container-img-logo"><img src="image/logo.png"><img class="img-text-kt" src="image/text-kt.png"></div>
     <ul>
       <li><a class="fb-logo" href="#"></a></li>
       <li><a class="vk-logo" href="#"></a></li>
@@ -19,11 +22,40 @@
     </ul>
   </div>
 </div>
+      <div class="container-form">
+                <div class="content-form">
+                  <div class="close"></div>
+                  <h1>Контакты</h1>
+                  <div class="flex-row">
+                    <div class="flex-row"><span class="title-phone">T:</span><span class="phone">8 (925) 337-52-98</span></div>
+                    <div class="flex-row"><span class="title-mail">E:</span><span class="email">info@kuznetcov.team</span></div>
+                  </div>
+                  <form id="form"><span>Напишите сообщение или задайте нам вопрос. Мы скоро ответим вам.</span>
+                    <div class="field-form">
+                      <div class="field--wrapper">
+                        <label>Как Вас зовут:</label>
+                        <input type="text" name="name" placeholder="Как Вас зовут:" require>
+                      </div>
+                      <div class="field--wrapper">
+                        <label>Моб. телефон:</label>
+                        <input type="tel" name="phone" placeholder="Моб. телефон:" require>
+                      </div>
+                      <div class="field--wrapper">
+                        <label>Сообщение:</label>
+                        <textarea name="message" rows="10" placeholder="Сообщение:" require></textarea>
+                      </div>
+                      <button>Отправить</button>
+                    </div>
+                  </form>
+                </div>
+      </div>
 <div class="container-header">
   <div class="header">
     <div class="title-header"><a href="#">Главная</a><a>...</a><a href="#">Ипаар</a><a>...</a><a href="#">О нас</a>
     </div>
-    <h1>KUZNETCOV.TEAM</h1>
+    <h1 class="typed">
+      <h1 class="typed-team"></h1>
+    </h1>
     <div class="all-service"><img src="image/all_services.svg"><a href="#">Все услуги</a></div>
   </div>
 </div>
@@ -44,18 +76,14 @@
       <div class="circle"></div>
       <div class="line"></div>
       <div class="text-about-us">
-        <h1>3 года</h1>
-        <p>Информацию обо всех посетителях сайта собирают системы аналитики, формируя для вас отчет по геопозиции, действиях, длительности пребывания на сайте, полу, возрасту, и даже интересах на основании данных из соцсетей.</p>
-        <p>Информацию обо всех посетителях сайта собирают системы аналитики, формируя для вас отчет по геопозиции, действиях, длительности пребывания на сайте, полу, возрасту, и даже интересах на основании данных из соцсетей.</p>
+        <h1>3 года</h1><span>Информацию обо всех посетителях сайта собирают системы аналитики, формируя для вас отчет по геопозиции, действиях, длительности пребывания на сайте, полу, возрасту, и даже интересах на основании данных из соцсетей.</span><span>Информацию обо всех посетителях сайта собирают системы аналитики, формируя для вас отчет по геопозиции, действиях, длительности пребывания на сайте, полу, возрасту, и даже интересах на основании данных из соцсетей.</span>
       </div>
     </div>
   </div>
   <div class="two-block-about-us">
     <div class="block-text-about-us">
       <div class="text-about-us">
-        <h1>30 человек</h1>
-        <p>Информацию обо всех посетителях сайта собирают системы аналитики, формируя для вас отчет по геопозиции, действиях, длительности пребывания на сайте, полу, возрасту, и даже интересах на основании данных из соцсетей.</p>
-        <p>Информацию обо всех посетителях сайта собирают системы аналитики, формируя для вас отчет по геопозиции, действиях, длительности пребывания на сайте, полу, возрасту, и даже интересах на основании данных из соцсетей.</p>
+        <h1>30 человек</h1><span>Информацию обо всех посетителях сайта собирают системы аналитики, формируя для вас отчет по геопозиции, действиях, длительности пребывания на сайте, полу, возрасту, и даже интересах на основании данных из соцсетей.</span><span>Информацию обо всех посетителях сайта собирают системы аналитики, формируя для вас отчет по геопозиции, действиях, длительности пребывания на сайте, полу, возрасту, и даже интересах на основании данных из соцсетей.</span>
       </div>
       <div class="line"></div>
       <div class="circle"></div><img class="about-us-img" src="image/icon2.svg">
@@ -66,40 +94,46 @@
       <div class="circle"></div>
       <div class="line"></div>
       <div class="text-about-us">
-        <h1>60 продуктов</h1>
-        <p>Информацию обо всех посетителях сайта собирают системы аналитики, формируя для вас отчет по геопозиции, действиях, длительности пребывания на сайте, полу, возрасту, и даже интересах на основании данных из соцсетей.</p>
-        <p>Информацию обо всех посетителях сайта собирают системы аналитики, формируя для вас отчет по геопозиции, действиях, длительности пребывания на сайте, полу, возрасту, и даже интересах на основании данных из соцсетей.</p>
+        <h1>60 продуктов</h1><span>Информацию обо всех посетителях сайта собирают системы аналитики, формируя для вас отчет по геопозиции, действиях, длительности пребывания на сайте, полу, возрасту, и даже интересах на основании данных из соцсетей.</span><span>Информацию обо всех посетителях сайта собирают системы аналитики, формируя для вас отчет по геопозиции, действиях, длительности пребывания на сайте, полу, возрасту, и даже интересах на основании данных из соцсетей.</span>
       </div>
     </div>
   </div>
 </div>
-<div class="container-indicators">
-  <div class="indicators-content">
-    <div class="first-indicators">
-      <h1>50</h1><span>Лендингов</span>
+<div class="container-indicators swiper-container">
+  <div class="indicators-content swiper-wrapper">
+    <div class="first-indicators swiper-slide">
+      <h1 id="first-indicators">0</h1><span>Лендингов</span>
     </div>
-    <div class="second-indicators">
-      <h1>30</h1><span>Фирменных стилей</span>
+    <div class="second-indicators swiper-slide">
+      <h1 id="second-indicators">0</h1><span>Фирменных стилей</span>
     </div>
-    <div class="third-indicators">
-      <h1>200</h1><span>SEO-продвижений</span>
+    <div class="third-indicators swiper-slide">
+      <h1 id="third-indicators">0</h1><span>SEO-продвижений</span>
     </div>
-    <div class="fourth-indicators">
-      <h1>150</h1><span>Комплексных аудитов</span>
+    <div class="fourth-indicators swiper-slide">
+      <h1 id="fourth-indicators">0</h1><span>Комплексных аудитов</span>
     </div>
-    <div class="fifth-indicators">
-      <h1>70</h1><span>Медийный компаний</span>
+    <div class="fifth-indicators swiper-slide">
+      <h1 id="fifth-indicators">0</h1><span>Медийный компаний</span>
     </div>
-    <div class="sixth-indicators">
-      <h1>0</h1><span>Недовольных клиентоы</span>
+    <div class="sixth-indicators swiper-slide">
+      <h1 id="sixth-indicators">0</h1><span>Недовольных клиентов</span>
     </div>
+  </div>
+  <div class="naw-arrow">
+    <div class="swiper-button-prev indication-prev"></div>
+    <div class="swiper-button-next indication-next"></div>
   </div>
 </div>
       <div class="project-carousel">
         <h1>Здесь может быть ваша компания</h1>
         <div class="container-carousel">
-          <div class="swiper-container">
+          <div class="swiper-container portfolio">
             <div class="swiper-wrapper"><img class="swiper-slide" src="image/one-slide.png"><img class="swiper-slide" src="image/two-slide.png"><img class="swiper-slide" src="image/three-slide.png"><img class="swiper-slide" src="image/four-slide.png"><img class="swiper-slide" src="image/fifth-slide.png"><img class="swiper-slide" src="image/sixth-slide.png"><img class="swiper-slide" src="image/seventh-slide.png"></div>
+            <div class="naw-arrow">
+              <div class="swiper-button-prev portfolio-prev"></div>
+              <div class="swiper-button-next portfolio-next"></div>
+            </div>
           </div>
         </div>
       </div>

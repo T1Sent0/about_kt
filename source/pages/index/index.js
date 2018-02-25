@@ -1,9 +1,9 @@
 import "./jquery.inputmask";
-import Slider from 'swiper/dist/js/swiper'
+import Slider from 'swiper'
 
 $(document).ready(function () {
 
-    let slider = new Slider('.swiper-container', {
+    let slider2 = new Slider('.portfolio', {
         effect: 'coverflow',
         initialSlide: 3,
         spaceBetween: -120,
@@ -11,39 +11,40 @@ $(document).ready(function () {
         centeredSlides: true,
         slidesPerView: 'auto',
         coverflowEffect: {
-            rotate: 20,
+            rotate: 0,
             stretch: 0,
             depth: 0,
             modifier: 1,
             slideShadows : true,
         },
+        navigation: {
+            nextEl: '.portfolio-next',
+            prevEl: '.portfolio-prev',
+        },
     });
-
-    slider.init();
-
 
     const bodySelector = $('body');
 
-    bodySelector.on('click', '.scroll-up', scrollTop);
+    // bodySelector.on('click', '.scroll-up', scrollTop);
 
-    function scrollTop() {
-        const topPage = $('.header');
-        $('html, body').animate({scrollTop: $(topPage).offset().top}, 1000);
-    }
+    // function scrollTop() {
+    //     const topPage = $('.header');
+    //     $('html, body').animate({scrollTop: $(topPage).offset().top}, 1000);
+    // }
 
-    bodySelector.on('click', '.arrow-on-down a', downScreen);
+    // bodySelector.on('click', '.arrow-on-down a', downScreen);
+    //
+    // function downScreen() {
+    //     const id = $(this).attr('href'),
+    //         top = $(id).offset().top;
+    //     $('body,html').animate({scrollTop: top}, 1000);
+    // }
 
-    function downScreen() {
-        const id = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1000);
-    }
-
-    bodySelector.on('click', '.fifteenth-screen', nextProject);
-
-    function nextProject() {
-        alert('25 строка файл js.js, переход на страницу следующего проекта')
-    }
+    // bodySelector.on('click', '.fifteenth-screen', nextProject);
+    //
+    // function nextProject() {
+    //     alert('25 строка файл js.js, переход на страницу следующего проекта')
+    // }
 
     const onClass = "on";
     const showClass = "show";
@@ -58,22 +59,22 @@ $(document).ready(function () {
     }).on("keyup", function () {
         $(this).trigger("checkval");
     }).on("focus", function () {
+        console.log($(this));
         $(this).prev("label").addClass(onClass);
     }).on("blur", function () {
         $(this).prev("label").removeClass(onClass);
     }).trigger("checkval");
 
     bodySelector.on('click', '.burger', mobileMenuOpen);
-    bodySelector.on('click', '.message-icon', mobileMessageOpen);
-    bodySelector.on('click', '.close', mobileMessageClose);
-    bodySelector.on('click', '.desktop-close', desktopCloseContact);
-    bodySelector.on('click', 'li.pensil', openDesctopMenu);
+    // bodySelector.on('click', '.message-icon', mobileMessageOpen);
+    // bodySelector.on('click', '.close', mobileMessageClose);
+    bodySelector.on('click', '.close', desktopCloseContact);
+    bodySelector.on('click', '.pensil', openDesctopMenu);
     // bodySelector.on('mouseover', 'input[type=text]', mouseOverFunc);
     // bodySelector.on('mouseover', 'input[type=tel]', mouseOverTelFunc);
     // bodySelector.on('mouseout', 'input[type=text], input[type=tel]', mouseOutFunc);
     // bodySelector.on('mouseout', 'input[type=text], input[type=tel]', mouseOutTelFunc);
-    bodySelector.on('focus', 'input[type=text]', focusFunc);
-    bodySelector.on('focus', 'input[type=tel]', focusTelFunc);
+    bodySelector.on('focus', 'input, textarea', focusFunc);
     bodySelector.on('focusout', 'input[type=tel]', focusOutTelFunc);
 
     const messageIcon = $('.message-icon');
@@ -107,80 +108,49 @@ $(document).ready(function () {
 
     const messageBlock = $('.mes');
 
-    function mobileMessageOpen() {
-        messageBlock.css('display', 'block');
-        mobileMenuBNlock.css({display: 'none'});
-        $('body').find('.close-burger').css('background', 'url(../img/mobile/all_services.svg) no-repeat').removeClass('close-burger');
-    }
+    // function mobileMessageOpen() {
+    //     messageBlock.css('display', 'block');
+    //     mobileMenuBNlock.css({display: 'none'});
+    //     $('body').find('.close-burger').css('background', 'url(../img/mobile/all_services.svg) no-repeat').removeClass('close-burger');
+    // }
 
     function openDesctopMenu() {
-        let$('.pensil-click, .opacity').css({display: 'block'});
+        $('.container-form, .opacity').show();
     }
 
-    function mobileMessageClose() {
-        messageBlock.css('display', 'none');
-        //mobileMenuBNlock.css({display: 'flex'});
-        $('.send-form').find('input[type=tel], input[type=text], textarea').val('');
-        $('.send-form').find('label').removeClass(showClass);
-        $('.send-form').find('input').removeClass('error');
-    }
+    // function mobileMessageClose() {
+    //     messageBlock.css('display', 'none');
+    //     //mobileMenuBNlock.css({display: 'flex'});
+    //     $('.send-form').find('input[type=tel], input[type=text], textarea').val('');
+    //     $('.send-form').find('label').removeClass(showClass);
+    //     $('.send-form').find('input').removeClass('error');
+    // }
 
     function desktopCloseContact() {
-        $('.pensil-click, .opacity').css({display: 'none'});
+        $('.container-form, .opacity').hide();
     }
 
-    function mouseOverFunc() {
-        $('input[type=text]').css({borderBottom: '0.04em solid #56c3e7'});
-    }
+    // function mouseOverFunc() {
+    //     $('input[type=text]').css({borderBottom: '0.04em solid #56c3e7'});
+    // }
 
-    function mouseOverTelFunc() {
-        $('input[type=tel]').css({borderBottom: '0.04em solid #56c3e7'});
-    }
+    // function mouseOverTelFunc() {
+    //     $('input[type=tel]').css({borderBottom: '0.04em solid #56c3e7'});
+    // }
 
-    function mouseOutFunc() {
-        $('input[type=text]').css({borderBottom: '0.04em solid #b5b5b5'});
-    }
+    // function mouseOutFunc() {
+    //     $('input[type=text]').css({borderBottom: '0.04em solid #b5b5b5'});
+    // }
 
-    function mouseOutTelFunc() {
-        $('input[type=tel]').css({borderBottom: '0.04em solid #b5b5b5'});
-    }
+    // function mouseOutTelFunc() {
+    //     $('input[type=tel]').css({borderBottom: '0.04em solid #b5b5b5'});
+    // }
 
     function focusFunc() {
-        $('input[type=text]').removeClass('error');
+        $(this).removeClass('error');
     }
 
-    function focusTelFunc() {
-        $('input[type=tel]').removeClass('error');
-    }
 
-    $('.send-form').submit(function () {
-        let th = $(this);
-        let data = $(this).serialize();
-        let err = false;
-
-        th.find('input[type=text], input[type=tel]').each(function () {
-            if ($(this).val() === ''){
-                $(this).addClass('error');
-                err = true;
-            }
-        });
-
-        if (!err) {
-            $.ajax({
-                type: "POST",
-                url: "../php/send_message.php",
-                data: data
-            }).done(function() {
-                $('.send-form').find('label').removeClass(showClass);
-                messageBlock.hide();
-                $('.success').show();
-                setTimeout(showMenuAfterSendMessage, 5000);
-                $(".send-form").trigger("reset");
-            })
-        }
-
-        return false;
-    });
 
     $('#send-form').submit(function () {
         let th = $(this);
@@ -238,10 +208,10 @@ $(document).ready(function () {
         return false;
     });
 
-    function showMenuAfterSendMessage() {
-        $(".success").hide();
-        mobileMenuBNlock.css({display: 'flex', display: '-webkit-flex', display: '-ms-flexbox', display: '-moz-box', display: '-webkit-box'});
-    }
+    // function showMenuAfterSendMessage() {
+    //     $(".success").hide();
+    //     mobileMenuBNlock.css({display: 'flex', display: '-webkit-flex', display: '-ms-flexbox', display: '-moz-box', display: '-webkit-box'});
+    // }
 
     function showMenuAfterSendMessageTwo() {
         $(".success-two").hide();
@@ -282,9 +252,9 @@ $(document).ready(function () {
     function focusOutTelFunc() {
         if ($(this).val()) {
 
-            var valueRgx = $(this).val();
+            let valueRgx = $(this).val();
 
-            var rgxp = /[\\_\\]/g;
+            let rgxp = /[\\_\\]/g;
 
             if (rgxp.test(valueRgx)) {
 

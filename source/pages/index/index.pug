@@ -4,7 +4,11 @@ block title
 
 block main
     div.main
+        div.opacity
         include ../../components/menu/menu
+        div.container-form
+            include ../../components/form/form
+            +create_form("form")
         include ../../components/header/header
         div.container-greeting
             div.greeting
@@ -22,7 +26,7 @@ block main
         div.project-carousel
             h1 Здесь может быть ваша компания
             div.container-carousel
-                div.swiper-container
+                div.swiper-container.portfolio
                     div.swiper-wrapper
                         img.swiper-slide(src=require('./img/slider/one-slide.png'))
                         img.swiper-slide(src=require('./img/slider/two-slide.png'))
@@ -31,6 +35,6 @@ block main
                         img.swiper-slide(src=require('./img/slider/fifth-slide.png'))
                         img.swiper-slide(src=require('./img/slider/sixth-slide.png'))
                         img.swiper-slide(src=require('./img/slider/seventh-slide.png'))
-        div.container-form
-            include ../../components/form/form
-            +create_form("form")
+                    div.naw-arrow
+                        div.swiper-button-prev.portfolio-prev
+                        div.swiper-button-next.portfolio-next

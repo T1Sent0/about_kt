@@ -1,27 +1,30 @@
-div.container-indicators
-    div.indicators-content
-        each className, index in ['first-indicators','second-indicators','third-indicators','fourth-indicators','fifth-indicators', 'sixth-indicators']
+div.container-indicators.swiper-container
+    div.indicators-content.swiper-wrapper
+        each className, index in ['first-indicators swiper-slide','second-indicators swiper-slide','third-indicators swiper-slide','fourth-indicators swiper-slide','fifth-indicators swiper-slide', 'sixth-indicators swiper-slide']
             if index === 0
                 div(class=className)
-                    h1 50
+                    h1#first-indicators 0
                     span Лендингов
             if index === 1
                 div(class=className)
-                    h1 30
+                    h1#second-indicators 0
                     span Фирменных стилей
             if index === 2
                 div(class=className)
-                    h1 200
+                    h1#third-indicators 0
                     span SEO-продвижений
             if index === 3
                 div(class=className)
-                    h1 150
+                    h1#fourth-indicators 0
                     span Комплексных аудитов
             if index === 4
                 div(class=className)
-                    h1 70
+                    h1#fifth-indicators 0
                     span Медийный компаний
             if index === 5
                 div(class=className)
-                    h1 0
+                    h1#sixth-indicators 0
                     span Недовольных клиентов
+    div.naw-arrow
+        div.swiper-button-prev.indication-prev
+        div.swiper-button-next.indication-next

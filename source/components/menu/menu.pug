@@ -1,6 +1,8 @@
 div.container-menu
     div.menu
-        img(src=require('./img/logo.png'))
+        div.container-img-logo
+            img(src=require('./img/logo.png'))
+            img.img-text-kt(src=require('./img/text-kt.png'))
         ul
             each caltgory, index in ['fb-logo', 'vk-logo', 'insta-logo', 'youtube-logo', 'pensil']
                 if index === 0

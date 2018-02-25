@@ -1,18 +1,24 @@
 mixin create_form(id_form)
     div.content-form
-        h1 Мы готовы, а вы ?
+        div.close
+        h1 Контакты
+        div.flex-row
+            div.flex-row
+                span.title-phone T:
+                span.phone 8 (925) 337-52-98
+            div.flex-row
+                span.title-mail E:
+                span.email info@kuznetcov.team
         form(id=id_form)
+            span Напишите сообщение или задайте нам вопрос. Мы скоро ответим вам.
             div.field-form
-                input(type='text' name=name)
-                input(type='text' name=site)
-                input(type='text' name=phone)
-                textarea(name=comment_area rows=5)
-                div.block-checkbox
-                    span.title-block-checkbox Предполагаемый бюджет:
-                        label
-                            input(type='checkbox' name=summ)
-                            span До 500 тыс.
-                        label
-                            input(type='checkbox' name=summ)
-                            span От 500 тыс.
-                button(type=submit) Начать работу
+                div.field--wrapper
+                    label Как Вас зовут:
+                    input(type='text' name='name' placeholder='Как Вас зовут:' require)
+                div.field--wrapper
+                    label Моб. телефон:
+                    input(type='tel' name='phone' placeholder='Моб. телефон:' require)
+                div.field--wrapper
+                    label Сообщение:
+                    textarea(name='message' rows=10 placeholder='Сообщение:' require)
+                button(type=submit) Отправить

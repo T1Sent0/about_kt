@@ -4,7 +4,7 @@ div.container-menu
             img(src=require('./img/logo.png'))
             img.img-text-kt(src=require('./img/text-kt.png'))
         ul
-            each caltgory, index in ['fb-logo', 'vk-logo', 'insta-logo', 'youtube-logo', 'pensil']
+            each caltgory, index in ['fb-logo', 'vk-logo', 'insta-logo', 'youtube-logo', 'pensil', 'burger']
                 if index === 0
                     li
                         a(class=caltgory href="#")
@@ -19,5 +19,7 @@ div.container-menu
                     li
                         a(class=caltgory href="#")
                 if index === 4
-                    li
+                    li(class=caltgory)
                         a(class=caltgory href="#")
+                if index === 5
+                    li(class=caltgory)

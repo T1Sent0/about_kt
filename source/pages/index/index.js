@@ -65,11 +65,11 @@ $(document).ready(function () {
         $(this).prev("label").removeClass(onClass);
     }).trigger("checkval");
 
-    bodySelector.on('click', '.burger', mobileMenuOpen);
+
     // bodySelector.on('click', '.message-icon', mobileMessageOpen);
     // bodySelector.on('click', '.close', mobileMessageClose);
     bodySelector.on('click', '.close', desktopCloseContact);
-    bodySelector.on('click', '.pensil', openDesctopMenu);
+
     // bodySelector.on('mouseover', 'input[type=text]', mouseOverFunc);
     // bodySelector.on('mouseover', 'input[type=tel]', mouseOverTelFunc);
     // bodySelector.on('mouseout', 'input[type=text], input[type=tel]', mouseOutFunc);
@@ -89,22 +89,7 @@ $(document).ready(function () {
         }
     });
 
-    function mobileMenuOpen() {
-        if  ($('body').find('.close-burger').length) {
-            $(this).css('background', 'url(../img/mobile/all_services.svg) no-repeat').removeClass('close-burger');
-            // messageIcon.css({display: 'none'});
-            messageBlock.css({display: 'none'});
-            mobileMenuBNlock.css({display: 'none'});
-            $('.send-form').find('input[type=tel], input[type=text], textarea').val('');
-            $('.send-form').find('label').removeClass(showClass);
-            $('.send-form').find('input').removeClass('error');
-        } else {
-            $(this).css('background', 'url(../img/mobile/close.svg) no-repeat').addClass('close-burger');
-            // messageIcon.css({display: 'block'});
-            mobileMenuBNlock.css({display: 'flex', display: '-webkit-flex', display: '-ms-flexbox', display: '-moz-box', display: '-webkit-box'});
-            messageBlock.css('display', 'none');
-        }
-    }
+
 
     const messageBlock = $('.mes');
 
@@ -114,9 +99,7 @@ $(document).ready(function () {
     //     $('body').find('.close-burger').css('background', 'url(../img/mobile/all_services.svg) no-repeat').removeClass('close-burger');
     // }
 
-    function openDesctopMenu() {
-        $('.container-form, .opacity').show();
-    }
+
 
     // function mobileMessageClose() {
     //     messageBlock.css('display', 'none');

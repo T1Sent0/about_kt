@@ -3,6 +3,15 @@ import './form.scss'
 const onClass = "on";
 const showClass = "show";
 
+const mobileForm = 'mobile-form';
+
+if (document.documentElement.clientWidth <= 900) {
+    $('.container-form').toggleClass(mobileForm);
+} else {
+    $('.container-form')
+}
+
+
 $('#form').submit(function () {
     let th = $(this);
     let data = $(this).serialize();

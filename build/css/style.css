@@ -1436,8 +1436,13 @@ form span {
       -ms-flex-direction: column;
       flex-direction: column; }
       .project-carousel .swiper-container .naw-arrow {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         position: relative;
         bottom: 10em; }
+    .project-carousel .swiper-slide {
+      width: 100%; }
   .naw-arrow {
     display: -webkit-box;
     display: -ms-flexbox;

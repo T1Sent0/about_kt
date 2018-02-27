@@ -333,6 +333,7 @@ form span {
       .flex-row:nth-child(2) {
         margin-bottom: 5em;
       }
+<<<<<<< HEAD
       a {
         text-decoration: none;
         color: black;
@@ -340,12 +341,17 @@ form span {
         font-family: ProximaNova_Regilar;
         font-weight: bold;
       }
+=======
+>>>>>>> 8cbeca9c1b1361f06298440b6201e676d2d3ad2b
     }
     .close {
       left: 94%;
       width: 5em;
       height: 5em;
+<<<<<<< HEAD
       cursor: pointer;
+=======
+>>>>>>> 8cbeca9c1b1361f06298440b6201e676d2d3ad2b
       background: url("./img/close.png") center/cover no-repeat;
     }
     input, textarea {

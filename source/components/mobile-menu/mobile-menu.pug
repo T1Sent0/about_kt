@@ -1,0 +1,40 @@
+div.container-mobile-menu
+    div.content-mobile-menu
+        ul
+            each category, index in ['Услуги', 'Портфолио', 'Методология работы', 'О нас', 'Контакты']
+                if index === 0
+                    li
+                        a(href='#')=category
+                if index === 1
+                    li
+                        a(href='#')=category
+                if index === 2
+                    li
+                        a(href='#')=category
+                if index === 3
+                    li
+                        a(href='#')=category
+                if index === 4
+                    li
+                        a(href='#')=category
+        div.flex-row.container
+            div.flex-row
+                span.title-phone T:
+                span.phone 8 (925) 337-52-98
+            div.flex-row
+                span.title-mail E:
+                a(class=email href='mailto:info@kuznetcov.team') info@kuznetcov.team
+        ul.social-menu
+            each categorySocial, indexSocial in ['facebook', 'vkontakte', 'instagramm', 'you-tube']
+                if indexSocial === 0
+                    li(class=categorySocial)
+                        a(href='$')
+                if indexSocial === 1
+                    li(class=categorySocial)
+                        a(href='$')
+                if indexSocial === 2
+                    li(class=categorySocial)
+                        a(href='$')
+                if indexSocial === 3
+                    li(class=categorySocial)
+                        a(href='$')

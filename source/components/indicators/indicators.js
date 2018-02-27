@@ -21,6 +21,12 @@ let coutn = false;
                 prevEl: '.indication-prev',
             },
         });
+       $('#first-indicators').text('50');
+       $('#second-indicators').text('30');
+       $('#third-indicators').text('200');
+       $('#fourth-indicators').text('150');
+       $('#fifth-indicators').text('700');
+       $('#sixth-indicators').text('0');
    } else {
        $(window).scroll(function () {
            changeInformation()

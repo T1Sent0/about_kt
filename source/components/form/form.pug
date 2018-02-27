@@ -8,7 +8,7 @@ mixin create_form(id_form)
                 span.phone 8 (925) 337-52-98
             div.flex-row
                 span.title-mail E:
-                span.email info@kuznetcov.team
+                a(class=email href='mailto:info@kuznetcov.team') info@kuznetcov.team
         form(id=id_form)
             span Напишите сообщение или задайте нам вопрос. Мы скоро ответим вам.
             div.field-form
@@ -22,3 +22,9 @@ mixin create_form(id_form)
                     label Сообщение:
                     textarea(name='message' rows=10 placeholder='Сообщение:' require)
                 button(type=submit) Отправить
+div.success-container
+    div.success-content
+        img(src=require('./img/message_icone.svg'))
+        div
+            span Спасибо!
+            span В ближайшее время мы с вами свяжемся.

@@ -17044,9 +17044,11 @@ __webpack_require__(17);
 
 __webpack_require__(19);
 
-__webpack_require__(20);
+__webpack_require__(21);
 
 __webpack_require__(22);
+
+__webpack_require__(24);
 
 /***/ }),
 /* 4 */
@@ -17066,6 +17068,38 @@ __webpack_require__(6);
 $(document).ready(function () {
 
     var menuContainer = $('.menu');
+    var bodySelector = $('body');
+    var showClass = "show";
+
+    bodySelector.on('click', '.burger, .close-mobile-menu', mobileMenuOpen);
+
+    bodySelector.on('click', '.pensil', openForm);
+
+    function openForm() {
+        $('.container-form, .content-form, .opacity').show();
+        $('.close-mobile-menu').removeClass('close-mobile-menu').addClass('burger');
+        $('.content-mobile-menu').hide();
+    }
+
+    function mobileMenuOpen() {
+        if ($('body').find('.close-mobile-menu').length) {
+            $(this).toggleClass('close-mobile-menu').addClass('burger');
+            $('.content-mobile-menu').hide();
+            // messageBlock.css({display: 'none'});
+            // mobileMenuBNlock.css({display: 'none'});
+            // $('.send-form').find('input[type=tel], input[type=text], textarea').val('');
+            // $('.send-form').find('label').removeClass(showClass);
+            // $('.send-form').find('input').removeClass('error');
+        } else {
+            $(this).toggleClass('burger').addClass('close-mobile-menu');
+            $('.container-form').hide();
+            $('.content-mobile-menu').show().css({ display: 'flex' });
+            // $(this).css('background', 'url(../img/mobile/close.svg) no-repeat').addClass('close-burger');
+            // messageIcon.css({display: 'block'});
+            // mobileMenuBNlock.css({display: 'flex', display: '-webkit-flex', display: '-ms-flexbox', display: '-moz-box', display: '-webkit-box'});
+            // messageBlock.css('display', 'none');
+        }
+    }
 
     $(window).resize(function () {
         if (document.documentElement.clientWidth <= 900) {}
@@ -18216,6 +18250,12 @@ if (document.documentElement.clientWidth < 900) {
             prevEl: '.indication-prev'
         }
     });
+    $('#first-indicators').text('50');
+    $('#second-indicators').text('30');
+    $('#third-indicators').text('200');
+    $('#fourth-indicators').text('150');
+    $('#fifth-indicators').text('700');
+    $('#sixth-indicators').text('0');
 } else {
     $(window).scroll(function () {
         changeInformation();
@@ -19871,15 +19911,13 @@ var mobileForm = 'mobile-form';
 
 if (document.documentElement.clientWidth <= 900) {
     $('.container-form').toggleClass(mobileForm);
-} else {
-    $('.container-form');
 }
 
 $('#form').submit(function () {
     var th = $(this);
     var data = $(this).serialize();
     var err = false;
-
+    $('button').prop('disabled', true);
     th.find('input[type=text], input[type=tel], textarea').each(function () {
         if ($(this).val() === '') {
             $(this).addClass('error');
@@ -19894,14 +19932,25 @@ $('#form').submit(function () {
             data: data
         }).done(function () {
             $('#form').find('label').removeClass(showClass);
-            // messageBlock.hide();
-            // $('.success').show();
-            // setTimeout(showMenuAfterSendMessage, 5000);
+            $('.container-form').css({ display: 'flex', flexDirection: 'column', alignItems: 'center' });
+            $('.content-form').hide();
+            $('.success-container').show();
+            setTimeout(showMenuAfterSendMessage, 5000);
+
             $('#form').trigger("reset");
+            $('body, html', parent.document).animate({ scrollTop: 0 }, 500);
         });
     }
     return false;
 });
+
+function showMenuAfterSendMessage() {
+    $('button').prop('disabled', false);
+    $('.content-form').hide();
+    $('.success-container').hide();
+    $('.container-form').hide();
+    $('body').scrollTop({ scrollTop: 0 });
+}
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -19912,26 +19961,39 @@ $('#form').submit(function () {
 
 /***/ }),
 /* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(20);
+
+/***/ }),
+/* 20 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 20 */
+/* 21 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-__webpack_require__(21);
+__webpack_require__(23);
 
 var _swiper = __webpack_require__(1);
 
 var _swiper2 = _interopRequireDefault(_swiper);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 $(document).ready(function () {
 
@@ -19997,11 +20059,10 @@ $(document).ready(function () {
         $(this).prev("label").removeClass(onClass);
     }).trigger("checkval");
 
-    bodySelector.on('click', '.burger', mobileMenuOpen);
     // bodySelector.on('click', '.message-icon', mobileMessageOpen);
     // bodySelector.on('click', '.close', mobileMessageClose);
     bodySelector.on('click', '.close', desktopCloseContact);
-    bodySelector.on('click', '.pensil', openDesctopMenu);
+
     // bodySelector.on('mouseover', 'input[type=text]', mouseOverFunc);
     // bodySelector.on('mouseover', 'input[type=tel]', mouseOverTelFunc);
     // bodySelector.on('mouseout', 'input[type=text], input[type=tel]', mouseOutFunc);
@@ -20020,25 +20081,6 @@ $(document).ready(function () {
         }
     });
 
-    function mobileMenuOpen() {
-        if ($('body').find('.close-burger').length) {
-            $(this).css('background', 'url(../img/mobile/all_services.svg) no-repeat').removeClass('close-burger');
-            // messageIcon.css({display: 'none'});
-            messageBlock.css({ display: 'none' });
-            mobileMenuBNlock.css({ display: 'none' });
-            $('.send-form').find('input[type=tel], input[type=text], textarea').val('');
-            $('.send-form').find('label').removeClass(showClass);
-            $('.send-form').find('input').removeClass('error');
-        } else {
-            var _mobileMenuBNlock$css;
-
-            $(this).css('background', 'url(../img/mobile/close.svg) no-repeat').addClass('close-burger');
-            // messageIcon.css({display: 'block'});
-            mobileMenuBNlock.css((_mobileMenuBNlock$css = { display: 'flex' }, _defineProperty(_mobileMenuBNlock$css, 'display', '-webkit-flex'), _defineProperty(_mobileMenuBNlock$css, 'display', '-ms-flexbox'), _defineProperty(_mobileMenuBNlock$css, 'display', '-moz-box'), _defineProperty(_mobileMenuBNlock$css, 'display', '-webkit-box'), _mobileMenuBNlock$css));
-            messageBlock.css('display', 'none');
-        }
-    }
-
     var messageBlock = $('.mes');
 
     // function mobileMessageOpen() {
@@ -20047,9 +20089,6 @@ $(document).ready(function () {
     //     $('body').find('.close-burger').css('background', 'url(../img/mobile/all_services.svg) no-repeat').removeClass('close-burger');
     // }
 
-    function openDesctopMenu() {
-        $('.container-form, .opacity').show();
-    }
 
     // function mobileMessageClose() {
     //     messageBlock.css('display', 'none');
@@ -20195,7 +20234,7 @@ $(document).ready(function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21278,7 +21317,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -8,25 +8,27 @@ $(document).ready(function() {
 
     bodySelector.on('click', '.burger, .close-mobile-menu', mobileMenuOpen);
 
-    bodySelector.on('click', '.pensil', openMenu);
+    bodySelector.on('click', '.pensil', openForm);
 
-    function openMenu() {
-        $('.container-form, .opacity').show();
-        $('li:last').removeClass('close-mobile-menu').addClass('burger')
+    function openForm() {
+        $('.container-form, .content-form, .opacity').show();
+        $('.close-mobile-menu').removeClass('close-mobile-menu').addClass('burger');
+        $('.content-mobile-menu').hide();
     }
 
     function mobileMenuOpen() {
         if  ($('body').find('.close-mobile-menu').length) {
-            $('li:last').toggleClass('close-mobile-menu').addClass('burger')
-
+            $(this).toggleClass('close-mobile-menu').addClass('burger');
+            $('.content-mobile-menu').hide();
             // messageBlock.css({display: 'none'});
             // mobileMenuBNlock.css({display: 'none'});
             // $('.send-form').find('input[type=tel], input[type=text], textarea').val('');
             // $('.send-form').find('label').removeClass(showClass);
             // $('.send-form').find('input').removeClass('error');
         } else {
-            $('li:last').toggleClass('burger').addClass('close-mobile-menu')
+            $(this).toggleClass('burger').addClass('close-mobile-menu');
             $('.container-form').hide();
+            $('.content-mobile-menu').show().css({display: 'flex'});
             // $(this).css('background', 'url(../img/mobile/close.svg) no-repeat').addClass('close-burger');
             // messageIcon.css({display: 'block'});
             // mobileMenuBNlock.css({display: 'flex', display: '-webkit-flex', display: '-ms-flexbox', display: '-moz-box', display: '-webkit-box'});

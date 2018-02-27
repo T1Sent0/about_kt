@@ -5,6 +5,7 @@ import '../components/fonts/_fonts.scss'
 import '../components/block-about-us/block-about-us'
 import '../components/indicators/indicators'
 import '../components/form/form'
+import '../components/mobile-menu/mobile-menu'
 
 import '../pages/index/index-mobile.scss'
 import '../pages/index/index'

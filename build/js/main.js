@@ -19867,6 +19867,14 @@ __webpack_require__(18);
 var onClass = "on";
 var showClass = "show";
 
+var mobileForm = 'mobile-form';
+
+if (document.documentElement.clientWidth <= 900) {
+    $('.container-form').toggleClass(mobileForm);
+} else {
+    $('.container-form');
+}
+
 $('#form').submit(function () {
     var th = $(this);
     var data = $(this).serialize();

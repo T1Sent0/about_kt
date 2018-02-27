@@ -265,6 +265,9 @@ form span {
 
 
 @media (max-width: 900px) {
+  .opacity {
+    display: none !important;
+  }
   .mobile-form {
     width: 100%;
     margin: 0;
@@ -284,11 +287,15 @@ form span {
       span {
         margin: 0;
       }
+      .flex-row:nth-child(2) {
+        margin-bottom: 5em;
+      }
     }
     .close {
-      left: 95%;
-      width: 3em;
-      height: 3em;
+      left: 94%;
+      width: 5em;
+      height: 5em;
+      background: url("./img/close.png") center/cover no-repeat;
     }
     input, textarea {
       font-size: 5em;
@@ -299,7 +306,7 @@ form span {
       padding-right: 0;
       justify-content: center;
       button {
-        font-size: 5em;
+        font-size: 4em;
         left: calc(50% - 4.25em);
       }
     }

@@ -1025,6 +1025,9 @@ template {
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse; } }
+.naw-arrow {
+  display: none; }
+
 .indicators-content {
   margin-left: 3.48em;
   padding: 2em 5em;
@@ -1092,7 +1095,7 @@ template {
   position: fixed;
   display: none;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background-color: #fff; }
 
 .display-block {
@@ -1285,6 +1288,44 @@ form span {
     /* IE 10+ */
     color: #e72026; }
 
+@media (max-width: 900px) {
+  .mobile-form {
+    width: 100%;
+    margin: 0;
+    position: relative; }
+    .mobile-form h1 {
+      font-size: 10em;
+      margin: .5em 0; }
+    .mobile-form span {
+      font-size: 5em;
+      width: inherit;
+      display: block;
+      margin-bottom: 1em; }
+    .mobile-form .container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .mobile-form .container span {
+        margin: 0; }
+    .mobile-form .close {
+      left: 95%;
+      width: 3em;
+      height: 3em; }
+    .mobile-form input, .mobile-form textarea {
+      font-size: 5em; }
+    .mobile-form .field-form {
+      padding-left: 0;
+      padding-right: 0;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .mobile-form .field-form button {
+        font-size: 5em;
+        left: calc(50% - 4.25em); }
+    .mobile-form .field--wrapper label {
+      font-size: 5em; } }
+
 * {
   font-size: 1vw; }
 
@@ -1293,7 +1334,7 @@ form span {
   width: 100%;
   position: fixed;
   display: none;
-  z-index: 1;
+  z-index: 2;
   opacity: .5;
   background-color: black; }
 
@@ -1399,8 +1440,6 @@ form span {
     background-position: center;
     background-size: cover;
     width: 40%; }
-  .project-carousel .naw-arrow {
-    display: none; }
 
 @media (max-width: 900px) {
   .greeting {

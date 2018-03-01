@@ -17080,20 +17080,35 @@ $(document).ready(function () {
         $('.close-mobile-menu').removeClass('close-mobile-menu').addClass('burger');
         $('.content-mobile-menu').hide();
     }
+    bodySelector.on('click', '.pensil', openMenu);
+
+    function openMenu() {
+        $('.container-form, .opacity').show();
+        $('li:last').removeClass('close-mobile-menu').addClass('burger');
+    }
 
     function mobileMenuOpen() {
         if ($('body').find('.close-mobile-menu').length) {
+
             $(this).toggleClass('close-mobile-menu').addClass('burger');
             $('.content-mobile-menu').hide();
+
+            $('li:last').toggleClass('close-mobile-menu').addClass('burger');
+
             // messageBlock.css({display: 'none'});
             // mobileMenuBNlock.css({display: 'none'});
             // $('.send-form').find('input[type=tel], input[type=text], textarea').val('');
             // $('.send-form').find('label').removeClass(showClass);
             // $('.send-form').find('input').removeClass('error');
         } else {
+
             $(this).toggleClass('burger').addClass('close-mobile-menu');
             $('.container-form').hide();
             $('.content-mobile-menu').show().css({ display: 'flex' });
+
+            $('li:last').toggleClass('burger').addClass('close-mobile-menu');
+            $('.container-form').hide();
+
             // $(this).css('background', 'url(../img/mobile/close.svg) no-repeat').addClass('close-burger');
             // messageIcon.css({display: 'block'});
             // mobileMenuBNlock.css({display: 'flex', display: '-webkit-flex', display: '-ms-flexbox', display: '-moz-box', display: '-webkit-box'});
@@ -19948,7 +19963,7 @@ function showMenuAfterSendMessage() {
     $('button').prop('disabled', false);
     $('.content-form').hide();
     $('.success-container').hide();
-    $('.container-form').hide();
+    $('.container-form, .opacity').hide();
     $('body').scrollTop({ scrollTop: 0 });
 }
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))

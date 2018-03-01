@@ -44,7 +44,7 @@ function showMenuAfterSendMessage() {
     $('button').prop('disabled', false);
     $('.content-form').hide();
     $('.success-container').hide();
-    $('.container-form').hide();
+    $('.container-form, .opacity').hide();
     $('body').scrollTop({scrollTop: 0});
 
 }

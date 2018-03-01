@@ -40,12 +40,12 @@ let coutn = false;
        windowHeight = $(window).height();
        if((getPositionContainer + containerHeight) + 10 <= windowHeight) {
            if (!coutn) {
-               $('#first-indicators').animateNumber({ number: 50 });
-               $('#second-indicators').animateNumber({ number: 30 });
-               $('#third-indicators').animateNumber({ number: 200 });
-               $('#fourth-indicators').animateNumber({ number: 150 });
-               $('#fifth-indicators').animateNumber({ number: 700 });
-               $('#sixth-indicators').animateNumber({ number: 0 });
+               $('#first-indicators').animateNumber({ number: 50 },3000);
+               $('#second-indicators').animateNumber({ number: 30 },3000);
+               $('#third-indicators').animateNumber({ number: 200 },3000);
+               $('#fourth-indicators').animateNumber({ number: 150 },3000);
+               $('#fifth-indicators').animateNumber({ number: 700 },3000);
+               $('#sixth-indicators').animateNumber({ number: 0 },3000);
                coutn = true;
            }
        } else {

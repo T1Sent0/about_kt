@@ -1118,6 +1118,8 @@ template {
   top: 0;
   z-index: 2;
   background-color: #fff;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center; }
   .container-form a {
     text-decoration: none;
@@ -1129,8 +1131,15 @@ template {
     padding: 6em 11em;
     display: none; }
     .container-form .success-container .success-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center; }
     .container-form .success-container * {
       font-family: ProximaNova_Regilar;
@@ -1339,6 +1348,9 @@ form span {
     .mobile-form .success-container {
       display: none; }
       .mobile-form .success-container .success-content {
+        -webkit-box-orient: horizontal !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
         flex-direction: row !important; }
         .mobile-form .success-container .success-content img {
           width: 20%;
@@ -1484,15 +1496,20 @@ form span {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
-  .greeting .greeting-text {
-    width: 46%; }
   .greeting .greeting-photo {
-    width: 32%; }
-    .greeting .greeting-photo img {
-      width: 90%;
-      border: none; }
+    width: 32%;
+    background: url(../image/nikita_paint.png) no-repeat;
+    background-size: cover;
+    -webkit-transition: all .7s;
+    transition: all .7s; }
+    .greeting .greeting-photo:hover {
+      background: url(../image/nikita_photo.png) no-repeat;
+      background-size: cover;
+      -webkit-transition: all .7s;
+      transition: all .7s; }
   .greeting .greeting-text {
-    margin: 3.31em 0 0 0; }
+    width: 46%;
+    margin: 3.31em 0 10em 0; }
     .greeting .greeting-text h1 {
       margin: 0;
       font-size: 2.66em;
@@ -1533,7 +1550,7 @@ form span {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 5.31em 8.12em 0 8.12em;
+  padding: 5.31em 8.12em;
   margin-left: 3.48em;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1570,7 +1587,7 @@ form span {
   .project-carousel .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 40%; }
+    width: 30%; }
 
 @media (max-width: 900px) {
   .greeting {
@@ -1584,7 +1601,7 @@ form span {
         font-size: 5em; }
       .greeting .greeting-text h2 {
         font-size: 5em; }
-    .greeting img {
+    .greeting .greeting-photo {
       display: none; }
     .greeting .rectangel {
       width: 20em;
@@ -1611,7 +1628,7 @@ form span {
         display: flex;
         position: relative; }
     .project-carousel .swiper-slide {
-      width: 100%; }
+      width: 80%; }
   .naw-arrow {
     display: -webkit-box;
     display: -ms-flexbox;

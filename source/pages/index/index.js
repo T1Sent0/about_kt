@@ -3,25 +3,27 @@ import Slider from 'swiper'
 
 $(document).ready(function () {
 
-    let slider2 = new Slider('.portfolio', {
-        effect: 'coverflow',
-        initialSlide: 3,
-        spaceBetween: -120,
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-            rotate: 0,
-            stretch: 0,
-            depth: 0,
-            modifier: 1,
-            slideShadows : true,
-        },
-        navigation: {
-            nextEl: '.portfolio-next',
-            prevEl: '.portfolio-prev',
-        },
-    });
+        let slider2 = new Slider('.portfolio', {
+            effect: 'coverflow',
+            initialSlide: 3,
+            spaceBetween: 5,
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 30,
+                stretch: 0,
+                depth: 70,
+                modifier: 1,
+                slideShadows : true,
+            },
+            navigation: {
+                nextEl: '.portfolio-next',
+                prevEl: '.portfolio-prev',
+            },
+        });
+
+        slider2.init();
 
     const bodySelector = $('body');
 

@@ -18284,12 +18284,12 @@ function changeInformation() {
     windowHeight = $(window).height();
     if (getPositionContainer + containerHeight + 10 <= windowHeight) {
         if (!coutn) {
-            $('#first-indicators').animateNumber({ number: 50 });
-            $('#second-indicators').animateNumber({ number: 30 });
-            $('#third-indicators').animateNumber({ number: 200 });
-            $('#fourth-indicators').animateNumber({ number: 150 });
-            $('#fifth-indicators').animateNumber({ number: 700 });
-            $('#sixth-indicators').animateNumber({ number: 0 });
+            $('#first-indicators').animateNumber({ number: 50 }, 3000);
+            $('#second-indicators').animateNumber({ number: 30 }, 3000);
+            $('#third-indicators').animateNumber({ number: 200 }, 3000);
+            $('#fourth-indicators').animateNumber({ number: 150 }, 3000);
+            $('#fifth-indicators').animateNumber({ number: 700 }, 3000);
+            $('#sixth-indicators').animateNumber({ number: 0 }, 3000);
             coutn = true;
         }
     } else {
@@ -20015,14 +20015,14 @@ $(document).ready(function () {
     var slider2 = new _swiper2.default('.portfolio', {
         effect: 'coverflow',
         initialSlide: 3,
-        spaceBetween: -120,
+        spaceBetween: 5,
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
         coverflowEffect: {
-            rotate: 0,
+            rotate: 30,
             stretch: 0,
-            depth: 0,
+            depth: 70,
             modifier: 1,
             slideShadows: true
         },
@@ -20031,6 +20031,8 @@ $(document).ready(function () {
             prevEl: '.portfolio-prev'
         }
     });
+
+    slider2.init();
 
     var bodySelector = $('body');
 
